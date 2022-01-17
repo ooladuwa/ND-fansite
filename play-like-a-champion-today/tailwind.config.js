@@ -33,9 +33,9 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
-      backgroundImage: theme => ({
-        naj: "url('/src/assets/images/night.jpg')"
-      }),
+      backgroundImage: {
+        irish: 'url("/src/assets/images/ND-background.jpg")'
+      },
       screens: {
         baller: '1980px',
         // => @media (min-width: 1600px) { ... }
@@ -50,10 +50,9 @@ module.exports = {
         onyx: '#3F4045', // onyx
         cloud: '#F3F3F3', // cloud
         silver: '#BFC0C5', // silver
-        lav: '#D0C4DF', // languid lavender
-        violet: '#A188BF', // African Violet
-        sheen: '#5DB2A5', // green sheen
-        minion: '#F4E04E' // minion yellow
+        ndblue: '#0C2340', // notre dame blue
+        domegold: '#C99700', // standard dome gold
+        irishgreen: '#00843D' // irish green
       },
       fontFamily: {
         sans: ['Inter var']
@@ -67,17 +66,17 @@ module.exports = {
     plugin(function ({ addComponents }) {
       const buttons = {
         '.btn': {
-          padding: '.5rem 1rem',
-          borderRadius: '12',
+          backgroundColor: '#0C2340',
+          padding: '.3rem .7rem',
+          borderRadius: 10,
           fontWeight: '600',
-          backgroundColor: '#5db2a5',
           border: 'solid 2px #030303',
-          color: '#030303',
+          color: '#C99700',
 
           '&:hover': {
-            backgroundColor: '#d0c4df',
+            backgroundColor: '#00843D',
             border: 'solid 2px #030303',
-            color: '#030303'
+            color: '#C99700'
           }
         }
       };
